@@ -2,7 +2,6 @@ package whitekr.chatservice
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import whitekr.chatservice.databinding.ActivityMainBinding
 
@@ -20,10 +19,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.confirmButton.setOnClickListener {
 
-            Toast.makeText(this, "Hello, ${binding.nameEditText.text}!", Toast.LENGTH_SHORT).show()
-
             val intent = Intent(this, ChatActivity::class.java)
-            intent.putExtra("name", binding.nameEditText.text)
+            intent.putExtra("name", binding.nameEditText.text.toString())
             startActivity(intent)
 
         }
