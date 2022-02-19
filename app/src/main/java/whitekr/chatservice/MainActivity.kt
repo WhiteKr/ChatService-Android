@@ -1,6 +1,7 @@
 package whitekr.chatservice
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import whitekr.chatservice.databinding.ActivityMainBinding
 
@@ -16,7 +17,10 @@ class MainActivity : AppCompatActivity() {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        "Bye, World!".also { binding.tvMessage.text = it }
+        binding.confirmButton.setOnClickListener {
 
+            Toast.makeText(this, binding.nameEditText.text, Toast.LENGTH_SHORT).show()
+
+        }
     }
 }

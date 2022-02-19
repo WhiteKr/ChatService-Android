@@ -1,3 +1,5 @@
 <resources>
 	<string name="app_name">ChatService</string>
+	<string name="type_your_name">Type your name.</string>
+	<string name="confirm">confirm</string>
 </resources>
