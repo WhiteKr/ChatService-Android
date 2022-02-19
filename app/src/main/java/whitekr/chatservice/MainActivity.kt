@@ -7,22 +7,22 @@ import whitekr.chatservice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private var mBinding: ActivityMainBinding? = null
-    private val binding get() = mBinding!!
+	private var mBinding: ActivityMainBinding? = null
+	private val binding get() = mBinding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+	override fun onCreate(savedInstanceState: Bundle?) {
 
-        super.onCreate(savedInstanceState)
+		super.onCreate(savedInstanceState)
 
-        mBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+		mBinding = ActivityMainBinding.inflate(layoutInflater)
+		setContentView(binding.root)
 
-        binding.confirmButton.setOnClickListener {
+		binding.mainButton.setOnClickListener {
 
-            val intent = Intent(this, ChatActivity::class.java)
-            intent.putExtra("name", binding.nameEditText.text.toString())
-            startActivity(intent)
+			val intent = Intent(this, ChatActivity::class.java)
+			intent.putExtra("name", binding.mainEditText.text.toString())
+			startActivity(intent)
 
-        }
-    }
+		}
+	}
 }

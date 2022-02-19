@@ -6,8 +6,8 @@
 	android:layout_height="match_parent"
 	tools:context=".MainActivity">
 
-	<TextView
-		android:id="@+id/title_textView"
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/main_textView"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:gravity="center"
@@ -15,14 +15,14 @@
 		android:textColor="@color/black"
 		android:textSize="20sp"
 		android:textStyle="bold"
-		app:layout_constraintBottom_toTopOf="@id/name_editText"
+		app:layout_constraintBottom_toTopOf="@id/main_editText"
 		app:layout_constraintLeft_toLeftOf="parent"
 		app:layout_constraintRight_toRightOf="parent"
 		app:layout_constraintTop_toTopOf="parent"
 		app:layout_constraintVertical_chainStyle="packed" />
 
 	<androidx.appcompat.widget.AppCompatEditText
-		android:id="@+id/name_editText"
+		android:id="@+id/main_editText"
 		android:layout_width="wrap_content"
 		android:layout_height="48dp"
 		android:layout_marginTop="10dp"
@@ -31,13 +31,13 @@
 		android:inputType="textPersonName"
 		android:minWidth="48dp"
 		android:textColorHint="@color/grey"
-		app:layout_constraintBottom_toTopOf="@id/confirm_button"
+		app:layout_constraintBottom_toTopOf="@id/main_button"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/title_textView" />
+		app:layout_constraintTop_toBottomOf="@id/main_textView" />
 
 	<androidx.appcompat.widget.AppCompatButton
-		android:id="@+id/confirm_button"
+		android:id="@+id/main_button"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"
 		android:background="@color/grey"
