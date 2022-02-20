@@ -91,16 +91,22 @@ class ChatActivity : AppCompatActivity() {
 	}
 
 	private val onDisconnect = Emitter.Listener {
-
 		runOnUiThread {
+
 			Toast.makeText(this, "Disconnected from server.", Toast.LENGTH_SHORT).show()
 			finish()
-		}
 
+		}
 	}
 
 	private val onError = Emitter.Listener {
-		Log.e("Socket Error", it[0].toString())
+		runOnUiThread {
+
+			Log.e("Socket Error", it[0].toString())
+			Toast.makeText(this, it[0].toString(), Toast.LENGTH_SHORT).show()
+			finish()
+
+		}
 	}
 
 	override fun onDestroy() {
