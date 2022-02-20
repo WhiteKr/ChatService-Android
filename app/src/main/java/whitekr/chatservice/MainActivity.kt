@@ -19,8 +19,14 @@ class MainActivity : AppCompatActivity() {
 
 		binding.mainButton.setOnClickListener {
 
+			val name: String = binding.mainEditText.text.toString()
+			if (name.isEmpty()) {
+				binding.mainEditText.error = "Name is required."
+				return@setOnClickListener
+			}
+
 			val intent = Intent(this, ChatActivity::class.java)
-			intent.putExtra("name", binding.mainEditText.text.toString())
+			intent.putExtra("name", name)
 			startActivity(intent)
 
 		}
