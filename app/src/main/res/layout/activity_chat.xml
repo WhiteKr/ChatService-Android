@@ -7,7 +7,7 @@
 	tools:context=".ChatActivity">
 
 	<androidx.recyclerview.widget.RecyclerView
-		android:id="@+id/chat_listView"
+		android:id="@+id/chat_recyclerView"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
 		app:layout_constraintBottom_toTopOf="@id/chat_editText"
@@ -27,7 +27,7 @@
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toStartOf="@id/chat_imageButton"
 		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toBottomOf="@id/chat_listView" />
+		app:layout_constraintTop_toBottomOf="@id/chat_recyclerView" />
 
 	<androidx.appcompat.widget.AppCompatImageButton
 		android:id="@+id/chat_imageButton"
@@ -39,7 +39,7 @@
 		app:layout_constraintBottom_toBottomOf="parent"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintStart_toEndOf="@id/chat_editText"
-		app:layout_constraintTop_toBottomOf="@id/chat_listView"
+		app:layout_constraintTop_toBottomOf="@id/chat_recyclerView"
 		app:srcCompat="@drawable/ic_baseline_send_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
