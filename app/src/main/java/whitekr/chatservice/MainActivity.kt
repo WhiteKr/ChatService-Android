@@ -8,7 +8,7 @@ import whitekr.chatservice.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
 	private var mBinding: ActivityMainBinding? = null
-	private val binding get() = mBinding!!
+	private val binding: ActivityMainBinding get() = mBinding!!
 
 	override fun onCreate(savedInstanceState: Bundle?) {
 
