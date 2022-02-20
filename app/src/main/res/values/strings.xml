@@ -4,4 +4,5 @@
 	<string name="confirm">confirm</string>
     <string name="send">send</string>
 	<string name="type_chat_text_here">Type chat text here...</string>
+	<string name="user_icon">User Icon</string>
 </resources>

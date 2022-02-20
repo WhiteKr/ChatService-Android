@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_marginTop="16dp"
+	android:layout_marginEnd="8dp">
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/chatMe_textView_date"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="32dp"
+		android:paddingStart="8dp"
+		android:paddingTop="4dp"
+		android:paddingEnd="8dp"
+		android:paddingBottom="4dp"
+		android:textColor="#C0C0C0"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<androidx.cardview.widget.CardView
+		android:id="@+id/chatMe_cardView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:cardBackgroundColor="#774df2"
+		app:cardCornerRadius="12dp"
+		app:cardElevation="0dp"
+		app:cardPreventCornerOverlap="false"
+		app:cardUseCompatPadding="true"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/chatMe_textView_date">
+
+		<androidx.appcompat.widget.LinearLayoutCompat
+			android:id="@+id/chatMe_linearLayout"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<androidx.appcompat.widget.AppCompatTextView
+				android:id="@+id/chatMe_textView_message"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginBottom="8dp"
+				android:maxWidth="260dp"
+				android:paddingLeft="12dp"
+				android:paddingTop="8dp"
+				android:paddingRight="12dp"
+				android:textColor="#ffffff"
+				android:textSize="16sp" />
+
+		</androidx.appcompat.widget.LinearLayoutCompat>
+	</androidx.cardview.widget.CardView>
+
+	<androidx.appcompat.widget.AppCompatTextView
+		android:id="@+id/chatMe_textView_timeStamp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:textColor="#C0C0C0"
+		android:textSize="11sp"
+		app:layout_constraintBottom_toBottomOf="@+id/chatMe_cardView"
+		app:layout_constraintEnd_toStartOf="@+id/chatMe_cardView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
