@@ -13,8 +13,8 @@ import whitekr.chatservice.databinding.ActivityChatBinding
 
 class ChatActivity : AppCompatActivity() {
 
-	private var mBinding: ActivityChatBinding? = null
-	private val binding: ActivityChatBinding get() = mBinding!!
+	private lateinit var mBinding: ActivityChatBinding
+	private val binding: ActivityChatBinding get() = mBinding
 
 	private lateinit var name: String
 	private lateinit var socket: Socket
